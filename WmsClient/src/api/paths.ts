@@ -1,0 +1,16 @@
+export const API_PATHS = {
+  health: '/health',
+  login: '/login',
+  me: '/me',
+  products: '/products',
+  warehouses: '/warehouses',
+  locations: '/locations',
+  inventory: '/inventory',
+  inventoryTransactions: '/inventory/transactions',
+  inventoryAlerts: '/inventory/alerts',
+  inboundOrders: '/inbound-orders',
+  outboundOrders: '/outbound-orders',
+  stocktakeOrders: '/stocktake-orders',
+  users: '/users',
+  inventoryTrend: '/dashboard/inventory-trend',
+} as const
