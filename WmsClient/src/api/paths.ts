@@ -12,5 +12,5 @@ export const API_PATHS = {
   outboundOrders: '/outbound-orders',
   stocktakeOrders: '/stocktake-orders',
   users: '/users',
-  inventoryTrend: '/dashboard/inventory-trend',
+  productMovement: '/dashboard/product-movement',
 } as const

@@ -1,20 +1,28 @@
 import { API_PATHS } from './paths'
 import { get } from './http'
 
-export interface InventoryTrendItem {
-  date: string
+export interface ProductMovementItem {
+  product_id: number
+  sku_code: string
+  name: string
+  spec: string
+  unit: string
   inbound_quantity: number
   outbound_quantity: number
+  net_consumption: number
+  current_quantity: number
+  safe_stock: number
+  suggested_purchase: number
 }
 
-export interface InventoryTrend {
+export interface ProductMovement {
   start_date: string
   end_date: string
   warehouse_id: number | null
-  product_id: number | null
-  items: InventoryTrendItem[]
+  formula: string
+  items: ProductMovementItem[]
 }
 
-export function getInventoryTrend(params?: Record<string, unknown>) {
-  return get<InventoryTrend>(API_PATHS.inventoryTrend, params)
+export function getProductMovement(params?: Record<string, unknown>) {
+  return get<ProductMovement>(API_PATHS.productMovement, params)
 }
